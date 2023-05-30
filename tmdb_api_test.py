@@ -14,5 +14,5 @@ proxies = {
 
 response = requests.get(url, headers=headers, proxies=proxies)
 
-f = open('upcoming.json', 'w')
-json.dump(response.json(), f)
+with open('upcoming.json', 'w') as f:
+    json.dump(response.json(), f)
