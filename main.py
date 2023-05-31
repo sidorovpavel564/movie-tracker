@@ -6,7 +6,7 @@ from database import SessionLocal, engine, Base
 from routers import user as UserRouter
 
 Base.metadata.create_all(bind=engine)
-app = FastAPI()
+app = FastAPI(title="Movie Tracker")
 app.include_router(UserRouter.router, prefix="/user")
 
 if __name__ == "__main__":
